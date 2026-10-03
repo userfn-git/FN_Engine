@@ -1,163 +1,222 @@
-# FN Rocket League Master Engine Suite
+# 🚀 FN Rocket League Master Engine Suite
 
-A modern utility for tuning Rocket League controller and keyboard behavior, generating Logitech G HUB Lua scripts, and preparing TAInput configuration values in a single workflow.
+> **Elite Controller Configuration & Automation Platform for Competitive Rocket League**
 
-This repository combines a React + TypeScript dashboard with companion automation assets for the FN Engine ecosystem, making it easier to manage physics presets, key mappings, Lua generation, backups, and training workflows.
+A professional-grade dashboard for generating optimized Logitech G HUB Lua scripts, tuning physics presets, and managing controller bindings—all from a unified interface designed for esports competitors.
 
-## Overview
+[![Version](https://img.shields.io/badge/version-7.0.0-fuchsia?style=flat-square)](https://github.com/fnesports/FN_Engine)
+[![React](https://img.shields.io/badge/React-18.3-61dafb?style=flat-square&logo=react)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![Vite](https://img.shields.io/badge/Vite-5.4-646cff?style=flat-square&logo=vite)](https://vitejs.dev)
 
-The app is organized around a tabbed dashboard with these focus areas:
+---
 
-- Physics & Bindings
-  - internal deadzone tuning
-  - dodge deadzone configuration
-  - hardware profile selection
-  - angle jitter settings
-  - aerial, speedflip, and half-flip key binds
-  - G-key mapping setup
+## 🎮 What is FN Engine?
 
-- Lua & Engine Hook
-  - generate Lua config scripts
-  - backup and restore script versions
-  - hook status simulation and log tracking
+FN Engine is a competitive esports utility designed to streamline Rocket League controller setup. It provides:
 
-- TAInput & G HUB Interop
-  - generate TAInput.ini values
-  - preserve backups of TAInput configuration
-  - integrate with Logitech G HUB workflow assumptions
+- **Physics Tuning** – Deadzone presets, hardware profiles, and jitter calibration
+- **Key Binding Management** – Aerial, speedflip, half-flip, and G-key mapping
+- **Lua Generation** – Auto-generate Logitech G HUB scripts with your custom config
+- **Config Backups** – Version and restore TAInput.ini and Lua scripts
+- **Training Workflows** – Integrated training pack management and game launchers
 
-- Training & Launchers
-  - manage training packs
-  - launch Rocket League flows from the UI
+Perfect for **esports professionals**, **competitive streamers**, and **content creators** who demand precision and repeatability.
 
-- G HUB Lua Docs
-  - embedded API reference panel for Logitech G HUB Lua usage
+---
 
-## Features
+## ✨ Features
 
-- React front-end with Vite
-- TypeScript-based configuration model
-- Tailwind styling for a dark esports dashboard look
-- Live log console for actions and status events
-- Lua script generation for Rocket League automation workflows
-- TAInput.ini generation and versioned backups
-- G-key and keyboard binding configuration
-- Training pack management for practice flow
+### 🎛️ **Physics & Bindings Tab**
+Fine-tune every control parameter with curated presets for competitive play.
 
-## Project Structure
+- Internal & dodge deadzone presets
+- Hardware profile selection (KBM, controller variants)
+- Angle jitter calibration
+- Customizable key bindings (keyboard & G-keys)
 
-```text
-.
-├── .env.example
-├── .github/
-├── FN_Engine_v50.exe
-├── FN_Engine_v50.ps1
-├── README.md
-├── SECURITY.md
-├── index.html
-├── metadata.json
-├── package.json
-├── src/
-│   ├── App.tsx
-│   ├── components/
-│   ├── data/
-│   ├── index.css
-│   ├── main.tsx
-│   ├── types.ts
-│   └── utils/
-├── tsconfig.json
-├── vite.config.ts
-└── RL_Esports.ico
-```
+### 💻 **Lua & Engine Hook Tab**
+Generate and manage Logitech G HUB automation scripts.
 
-## Tech Stack
+- One-click Lua config generation
+- Versioned script backups with timestamps
+- Hook status monitoring and real-time logging
+- Advanced macro integration
 
-- React 18
-- TypeScript
-- Vite
-- Tailwind CSS
-- Lucide React icons
-- Motion library
+### ⚙️ **TAInput & G HUB Interop Tab**
+Direct configuration export for Rocket League's input system.
 
-## Quick Start
+- Auto-generate TAInput.ini values
+- Backup and restore configurations
+- G HUB workflow integration
+- Direct physics injection
+
+### 🏆 **Training & Launchers Tab**
+Manage training packs and launch workflows.
+
+- Training pack browser
+- One-click Rocket League launch
+- Session logging and history
+
+### 📚 **G HUB Lua Docs Tab**
+Embedded Logitech G HUB Lua API reference.
+
+- Function signatures and examples
+- Event handling patterns
+- Quick copy-paste code snippets
+
+### 🖥️ **Real-time Console**
+Live action log with color-coded status events.
+
+- Success, error, warning, and info levels
+- Full session history
+- Clear and export capabilities
+
+---
+
+## 🏗️ Tech Stack
+
+- **React 18** – Modern UI framework
+- **TypeScript** – Type-safe development
+- **Vite** – Lightning-fast build and dev server
+- **Tailwind CSS** – Responsive dark esports aesthetic
+- **Lucide React** – Beautiful icon library
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
-
 - Node.js 18+
-- npm
+- npm or yarn
 
-### Install dependencies
+### Installation
 
 ```bash
+git clone https://github.com/fnesports/FN_Engine.git
+cd FN_Engine
 npm install
 ```
 
-### Run locally
+### Development
 
 ```bash
 npm run dev
 ```
 
-This starts the Vite dev server for the dashboard.
+Opens the dashboard at `http://localhost:3000`.
 
-### Production build
+### Production Build
 
 ```bash
 npm run build
 ```
 
-The production bundle is generated in the `dist/` directory.
+Optimized bundle ready for deployment.
 
-### Preview production build
+### Preview Build
 
 ```bash
 npm run preview
 ```
 
-## Configuration Notes
+Test the production build locally.
 
-The app uses an opinionated set of defaults as a starting point, including:
+---
 
-- internal deadzone presets
-- dodge deadzone presets
-- hardware profile presets
-- angle jitter options
-- default keybindings and G-key assignments
+## 📋 Project Structure
 
-You can tune these directly from the UI and regenerate the exported Lua / TAInput content.
-
-## Usage
-
-1. Open the app in the browser.
-2. Adjust physics and binding values on the Physics & Bindings tab.
-3. Generate the Lua script and TAInput configuration.
-4. Use the backup tools to save iterative states.
-5. Launch and validate in your Rocket League workflow.
-
-## Notes
-
-This repository contains both:
-
-- a browser-based configuration dashboard, and
-- a companion Windows executable / PowerShell automation asset (`FN_Engine_v50.exe` and `FN_Engine_v50.ps1`).
-
-The README focuses on the application and development workflow for the source code in this repository.
-
-## Security
-
-Please review `SECURITY.md` for the repository's security reporting guidance.
-
-## License
-
-This repository does not appear to declare a project license in the root files inspected here. If you plan to distribute or reuse the project outside the repository context, confirm the intended licensing before publication or redistribution.
-
-## Contributing
-
-Contributions are welcome. The recommended flow is:
-
-```bash
-npm install
-npm run build
+```
+FN_Engine/
+├── src/
+│   ├── App.tsx                 # Main application
+│   ├── components/             # Tabbed UI components
+│   ├── data/                   # Config presets & defaults
+│   ├── utils/                  # Lua & TAInput generators
+│   ├── types.ts                # TypeScript interfaces
+│   └── main.tsx                # React entry point
+├── index.html                  # App shell
+├── package.json                # Dependencies
+├── tsconfig.json               # TypeScript config
+├── vite.config.ts              # Vite config
+└── README.md                   # This file
 ```
 
-Then validate the generated UI in the local dev environment before submitting changes.
+---
+
+## 🎯 Workflow
+
+1. **Configure** – Adjust physics and key bindings in the Physics tab
+2. **Generate** – Create Lua scripts and TAInput configs with one click
+3. **Backup** – Save versioned copies before applying changes
+4. **Launch** – Start Rocket League with your optimized setup
+5. **Iterate** – Restore backups and refine your config in real time
+
+---
+
+## 🔧 Companion Assets
+
+This repository also includes:
+
+- **FN_Engine_v50.ps1** – PowerShell automation script for advanced workflows
+- **FN_Engine_v50.exe** – Windows executable for standalone operation
+
+Both complement the web dashboard and can be integrated into your esports automation pipeline.
+
+---
+
+## 📦 Default Presets
+
+The app ships with battle-tested presets:
+
+| Category | Example |
+|----------|---------|
+| **Deadzones** | NWPO Esports Pro (0.07), Ultra Low (0.05), Standard (0.10) |
+| **Hardware** | KBM Esports Pro (Logitech G502X), Xbox Controller, PS5 DualSense |
+| **Jitter** | Pro (1.0°), Standard (1.5°), Relaxed (2.0°) |
+| **Keys** | SpaceBar (Aerial), LeftShift (Speedflip), S (Half-Flip) |
+
+Fully customizable for your playstyle.
+
+---
+
+## 🔐 Security
+
+See [SECURITY.md](./SECURITY.md) for responsible disclosure and security guidelines.
+
+---
+
+## 📄 License
+
+This project does not currently declare a license. If you plan to distribute or build on this work, please confirm licensing intentions with the repository maintainers.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from the competitive community.
+
+```bash
+npm run build  # Validate your changes
+npm run dev    # Test locally
+```
+
+Submit a PR with a clear description of your enhancement or fix.
+
+---
+
+## 🎬 About FN Esports
+
+FN Engine is built by esports professionals for esports professionals. Designed with competitive precision in mind.
+
+**For support, issues, or feature requests:** [Open an issue](https://github.com/fnesports/FN_Engine/issues)
+
+---
+
+<div align="center">
+
+**Made for Rocket League competitors who demand precision.**
+
+[🌐 Website](https://fnesports.com) • [📧 Contact](mailto:contact@fnesports.com) • [🐦 Twitter](https://x.com/fnesports)
+
+</div>
